@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .big{
+            width: 400px;
+            height: 400px;
+            background: hotpink;
+        }
+        .small {
+            width: 50px;
+            height: 50px;
+            float: left;
+            background: lightgreen;
+            margin-left: 10px;
+        }
+    </style>
+    <script></script>
+</head>
+<body>
+<div class="big">
+</div>
+<script>
+    var big = document.getElementsByClassName("big")[0];
+
+    big.onclick = function (e) {
+        if(e.target.className.indexOf("small") != -1){
+            alert("我是一个div");
+        }
+    }
+
+    var div = document.createElement("div");
+    div.className = "small";
+    big.appendChild(div);
+//    div.onclick = function () {
+//        alert("我是一个div");
+//    }
+
+
+    var div1 = document.createElement("div");
+    div1.className = "small";
+    big.appendChild(div1);
+//    div1.onclick = function () {
+//        alert("我是一个div");
+//    }
+
+
+    var div2 = document.createElement("div");
+    div2.className = "small";
+    big.appendChild(div2);
+
+    var div3 = document.createElement("div");
+    div3.className = "small";
+    big.appendChild(div3);
+
+//    div2.onclick = function () {
+//        alert("我是一个div");
+//    }
+
+
+//    var small = document.getElementsByClassName("small")[0];
+////    small.onclick = function () {
+////        alert("小盒子被点击了");
+////    };
+//
+//    var big = document.getElementsByClassName("big")[0];
+//    big.onclick = function (e) {
+//        if(e.target.className.indexOf("small") != -1){
+//            alert(1);
+//        }
+//    }
+    
+//    $(".big").on("click", ".small", function () {
+//
+//    })
+</script>
+</body>
+</html>
